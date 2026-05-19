@@ -1,0 +1,29 @@
+<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_814_9)">
+<rect width="100" height="100" rx="18" fill="#001E36"/>
+<g filter="url(#filter0_ii_814_9)">
+<path d="M60 36.7922C60 37.1122 60.127 37.4192 60.3532 37.6457C60.5797 37.8725 60.8872 38 61.2078 38H78C79.1046 38 80 38.8954 80 40V76C80 77.1046 79.1046 78 78 78H22C20.8954 78 20 77.1046 20 76V40C20 38.8954 20.8954 38 22 38H38.7063C39.0494 38 39.3785 37.8637 39.6211 37.6211C39.8637 37.3785 40 37.0494 40 36.7063V20C40 18.8954 40.8954 18 42 18H58C59.1046 18 60 18.8954 60 20V36.7922ZM41.122 38C40.8244 38 40.539 38.1182 40.3286 38.3286C40.1182 38.539 40 38.8244 40 39.122V56C40 57.1046 40.8954 58 42 58H58C59.1046 58 60 57.1046 60 56V39.207C60 38.8869 59.8728 38.5799 59.6465 38.3535C59.4201 38.1272 59.1131 38 58.793 38H41.122Z" fill="#31A8FF"/>
+</g>
+</g>
+<defs>
+<filter id="filter0_ii_814_9" x="18" y="16" width="64" height="64" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dx="-2" dy="-2"/>
+<feGaussianBlur stdDeviation="2"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="shape" result="effect1_innerShadow_814_9"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dx="2" dy="2"/>
+<feGaussianBlur stdDeviation="2"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="effect1_innerShadow_814_9" result="effect2_innerShadow_814_9"/>
+</filter>
+<clipPath id="clip0_814_9">
+<rect width="100" height="100" rx="18" fill="white"/>
+</clipPath>
+</defs>
+</svg>

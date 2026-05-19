@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap');
+
+
+/* css pc */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#pc{
+    display: none;
+}
+
+
+body{
+    background-color: dodgerblue;
+}
+#navpc{
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+}
+#zonenav{
+    height: 150px;
+    width: 1000px;
+    /* background-color: aliceblue; */
+    /* position: fixed; */
+
+}
+#fondnav{
+    background-color: #343434;
+    height: 75px;
+    position: relative;
+    top: 100px;
+    border-radius: 0 25px 0 0;
+    /* color: white; */
+}
+#zoneboutonsnav{
+    position: relative;
+    bottom: 50px;
+    padding-left: 250px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.bouton{
+    position: relative;
+    height: 100px;
+    width: 100px;
+    background-size: cover;
+    transition: transform 0.3s ease-out;
+    /* box-shadow: 0 5px 8px 1px rgba(0, 0, 0, 0.50); */
+    /* border-radius */
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    /* box-shadow */
+    -webkit-box-shadow:  0 5px 8px 1px rgba(0, 0, 0, 0.50);
+    -moz-box-shadow: 0 5px 8px 1px rgba(0, 0, 0, 0.50);
+    box-shadow:  0 5px 8px 1px rgba(0, 0, 0, 0.50);
+}
+
+#boutonpixel{
+    background-image: url(logos/pixel.svg);
+}
+#boutonvector{
+    background-image: url(logos/vector.svg);
+}
+#boutonvideo{
+    background-image: url(logos/video.svg);
+}
+#boutonmep{
+    background-image: url(logos/mep.svg);
+}
+#boutonfigma{
+    background-image: url(logos/figma.svg);
+}
+#boutoncode{
+    background-image: url(logos/code.svg);
+}
+
+    
+
+.bouton:hover{
+    /* bottom: 25px; */
+    transform: translateY(-25px);
+}
+#home{
+    position: absolute;
+    width: 250px;
+    height: 150px;
+    background-color: aliceblue;
+    bottom: 0;
+    border-radius: 0 75px 0 0;
+    transition: transform 0.2s ease-out;
+    /* box-shadow */
+    -webkit-box-shadow:  0 0 8px 5px rgba(0, 0, 0, 0.50);
+    -moz-box-shadow: 0 0 8px 5px rgba(0, 0, 0, 0.50);
+    box-shadow:  0 0 8px 5px rgba(0, 0, 0, 0.50);
+}
+#home:hover{
+    transform: scale(105%);
+}
+
+#logohome{
+    width: 180px;
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+}
+
+#infonavbox{
+    bottom: 0;
+    width: 125px;
+    /* height: 75px; */
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+#infonav{
+    padding: 5px;
+    margin-top: 65px;
+    width: 200px;
+    height: 85px;
+    background-color: #343434;
+    position: relative;
+    border-radius: 30px 0 0 0;
+    top: 55px;
+}
+
+#infonavtop{
+    height: 37.5px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.icone{
+    height: 18px;
+}
+
+#son,#wifi{
+    margin-top: 8px;
+}
+
+#liveheure{
+    color: #d9d9d9;
+    font-family: "Jura", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 25px;
+    margin-top: 2px;
+}
+
+.infonavtopitem{
+    margin: 10px;
+    margin-right: 0;
+    flex-wrap: wrap;
+}
+
+#infonav{
+    color: #d9d9d9;
+    font-family: "Jura", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 25px;
+    margin-top: 10px;
+}
+
+#infonavbot{
+    margin-left: 8px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+#deuxpoints{
+    animation: clignotement 2s steps(1) infinite;
+}
+
+@keyframes clignotement {
+    0% {opacity: 1;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+
+
+
+
+
+
+
+
+/* css mobile */
+#mobile{
+    font-family: "Jura", sans-serif;
+    font-weight: 700;
+}
+#navmobile{
+    height: 250px;
+    width: 100%;
+    background-color: #3434347a;
+    position: fixed;
+    bottom: 0;
+    z-index: 1000;
+    border-radius: 30px 30px 0 0;
+}
+#navmhaut{
+    height: 150px;
+    width: 100%;
+    position: fixed;
+    bottom: 90px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+#navmbas{
+    height: 90px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    background-image:url(logos/logobleu.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    z-index: 1001;
+}
+.presmobile {
+    text-decoration: none;
+    color: #d9d9d9;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    text-align: center;
+}
