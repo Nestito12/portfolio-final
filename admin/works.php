@@ -156,7 +156,7 @@
                             echo '<td>'.$donProd['mydate'].'</td>';
                             echo '<td>'.$donProd['category'].'</td>';
                             echo '<td>';
-                                echo '<a href="updateProduct.php?id='.$donProd['id'].'" class="btn btn-warning">Modifier</a>';
+                                echo '<a href="updateWorks.php?id='.$donProd['id'].'" class="btn btn-warning">Modifier</a>';
 
                                 echo '<button type="button" class="btn btn-danger mx-2" data-bs-toggle="modal" data-bs-target="#deleteModal'.$donProd['id'].'">
   supprimer
@@ -173,7 +173,7 @@
                                         echo '</div>';
                                         echo ' <div class="modal-footer">';
                                             echo ' <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Ne pas supprimer</button>';
-                                            echo '<a href="products.php?delete='.$donProd['id'].'" class="btn btn-danger mx-2">Supprimer</a>';
+                                            echo '<a href="works.php?delete='.$donProd['id'].'" class="btn btn-danger mx-2">Supprimer</a>';
                                         echo '</div>';
                                     echo '</div>';
                                 echo '</div>';

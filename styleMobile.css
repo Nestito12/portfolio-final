@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Jura", sans-serif;
+}
+nav{
+    z-index: 1000;
+}
+body{
+    background-color: #d9d9d9;
+}
+#bodyMobile{
+    background-color: dodgerblue;
+}
+#navmobile{
+    height: 170px;
+    width: 100%;
+    background-color: #343434ab;
+    position: fixed;
+    bottom: 0;
+    z-index: 1000;
+    border-radius: 30px 30px 0 0;
+}
+#navmhaut{
+    height: 150px;
+    width: 100%;
+    position: fixed;
+    bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+.presmobile {
+    text-decoration: none;
+    color: #d9d9d9;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    text-align: center;
+}
+#navMobileDeux{
+    width: 100vw;height: 225px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    bottom: 0px;
+}
+#navHome{
+    width: 125px;height: 125px;
+    border-radius: 20px 20px 0 0;
+    background-color: #3434349b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#navHomeIcon{
+    width: 65%;height: 65%;
+}
+#navMobileDeuxHaut{
+    width: 100%;height: 125px;
+    /* background-color: blue; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#navMobileDeuxBas{
+    width: 100%;height: 100px;
+    background-color: #3434349b;
+    border-radius: 3cqw 12.5vw 0 0;
+}
+#navLogoBlanc{
+    margin: 10px;
+    width: calc(100% - 20px);height: 100%;
+    /* background-color: red; */
+    background-image: url(logos/logoD9.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+}
+p{
+        font-weight: 700;
+}
+#logoFond{
+    height: 100px;
+}
+#accueilMobile{
+    height: calc(100vh - 300px);width: calc(100vw - 100px);
+    /* background-color: red; */
+    position: absolute;
+    top: 150px;
+    left: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: left;
+    justify-content: space-between;
+    overflow-y: auto;
+    gap: 50px;
+    scrollbar-width: none;
+}
+.bouton{
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 11.9px;
+    color: #343434;
+    margin-bottom: 25px;
+}
+.logoApp{
+    width: 100px;height: 100px;
+}
+.nomApp{
+    text-align: center;
+    width: 100%;
+}
+
+
+
+
+
+
+
+#fondExplorer{
+    z-index: 1;
+    width: 90%;height: calc(95vh - 225px);
+    position: fixed;
+    left: 5%;
+    top: 5%;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+}
+.demiZone{
+    /* flex: 1; */
+    height: 50%;
+}
+#zoneAffichage{
+    /* background-color: blue; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: solid white 1px;
+}
+#zoneIcones{
+    /* background-color: red; */
+}
+#mobileApercu{
+    width: 90%;height: 90%;
+    object-fit: contain;   
+}
+#zoneIconesCentrage{
+    position: relative;
+    height: 90%;width: 90%;
+    top: 5%;left: 5%;
+    display: grid;
+    gap: 8px;
+    justify-content: space-between;
+    /* flex-wrap: wrap;
+    justify-content: space-evenly left ;
+    align-content: flex-start; */
+    overflow-y: auto;
+    /* background-color: red; */
+    grid-template-columns: repeat(auto-fit, 100px);
+}
+.iconesExplorer{
+    width: 100px;height: 100px;
+}
+.miniaExplorer{
+    width: 80px;height: 80px;
+    border: solid #343434 10px;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+
+
+
+
+
+
+
+#contact{
+    width: 90%;height: calc(100%- 225px -10vw);
+    position: absolute;
+    left: 5vw;
+    bottom:calc(225px + 5vw);
+}
+#contactConteneur{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.titre{
+    font-family: "Jura", sans-serif;
+    color: #343434;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.liContact{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px
+}
+.txtContact{
+    font-family: "Jura", sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    margin-bottom: 3px;
+}
+.inputContact{
+    padding: 10px;
+    font-family: "Jura", sans-serif;
+    background-color: rgba(52, 52, 52, 0.8);
+    border: none;
+    border-radius: 10px;
+    color:#d9d9d9;
+    font-size: 20px;
+    resize: none;
+}
+.invis{
+    display: none;
+}
+#msg{
+    height: 200px;
+    overflow-y: scroll;
+}
+.inputContact::placeholder{
+    color: rgba(217, 217, 217, 0.5);
+    font-size: 20px;
+}
+#zoneBoutonContact{
+    width: 100%; height: 50px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+#boutonContact{
+    height: 100%; width: 200px;
+    border: none;
+    border-radius: 15px;
+    background-color: #343434;
+    color: #d9d9d9;
+    font-size: 15px;
+    font-family: "Jura", sans-serif;
+    font-weight: 700;
+}

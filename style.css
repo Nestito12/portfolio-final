@@ -1,20 +1,80 @@
 @import url('https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap');
 
-
+html, body {
+  max-width: 100%;
+  overflow: hidden;
+}
 /* css pc */
 *{
     margin: 0;
     padding: 0;
 }
 
-#pc{
-    display: none;
+.pc{
+    /* display: none; */
 }
 
 
 body{
+    background-image: url(images/fond/fond.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
     background-color: dodgerblue;
 }
+.checkContact{
+    display: none;
+}
+.checkPres{
+    display: none;
+}
+.checkContact:checked ~ .pageContact{
+    transform: translateX(-475px);
+}
+.checkPres:checked ~ .pagePres{
+    transform: translateY(-100vh);
+}
+#zone-boutons-menu-pc{
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    width: 100;
+    display: flex;
+    /* flex-direction: column; */
+}
+.bouton-menu-pc{
+    margin-left: 10px ;
+    height: 150px;
+    width: 125px;
+    display: flex;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    text-decoration: none;
+}
+
+#cv-pc{
+    position: relative;
+
+}
+.txt-pc{
+    width: 100%;
+    color: #d9d9d9;
+    font-family: "Jura", sans-serif;
+    font-size: small;
+    font-weight: 1000;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    bottom: 15px;
+}
+#cv-pc{
+    
+}
+
+
+
+/* nav pc */
 #navpc{
     width: 100%;
     bottom: 0;
@@ -22,10 +82,12 @@ body{
     height: 150px;
     display: flex;
     justify-content: space-between;
+    z-index: 10000;
 }
 #zonenav{
     height: 150px;
-    width: 1000px;
+    width: fit-content;
+    max-width: calc(100vw - 200px);
     /* background-color: aliceblue; */
     /* position: fixed; */
 
@@ -36,19 +98,28 @@ body{
     position: relative;
     top: 100px;
     border-radius: 0 25px 0 0;
+    
     /* color: white; */
 }
 #zoneboutonsnav{
+    width: ();
     position: relative;
-    bottom: 50px;
+    bottom: 80px;
     padding-left: 250px;
+    padding-right: 20px;
     display: flex;
     justify-content: space-evenly;
+    overflow-x: scroll;
+    padding-top: 30px;
+    padding-bottom: 15px;
+    margin-right: 20px;
 }
 .bouton{
     position: relative;
     height: 100px;
     width: 100px;
+    margin-left:10px ;
+    margin-right: 10px;
     background-size: cover;
     transition: transform 0.3s ease-out;
     /* box-shadow: 0 5px 8px 1px rgba(0, 0, 0, 0.50); */
@@ -62,32 +133,31 @@ body{
     box-shadow:  0 5px 8px 1px rgba(0, 0, 0, 0.50);
 }
 
-#boutonpixel{
-    background-image: url(logos/pixel.svg);
-}
-#boutonvector{
-    background-image: url(logos/vector.svg);
-}
-#boutonvideo{
-    background-image: url(logos/video.svg);
-}
-#boutonmep{
-    background-image: url(logos/mep.svg);
-}
-#boutonfigma{
-    background-image: url(logos/figma.svg);
-}
-#boutoncode{
-    background-image: url(logos/code.svg);
+h3{
+    position: absolute;
+    width: 100%;
+    color: #d9d9d9;
+    font-family: "Jura", sans-serif;
+    font-size: small;
+    text-align: center;
+    bottom: 10px;
+    z-index: -1;
+    transition: transform 0.3s ease-out;
 }
 
+.bouton:hover h3{
+    /* bottom: 25px; */
+    transform: translateY(40px);
+}
     
 
 .bouton:hover{
     /* bottom: 25px; */
     transform: translateY(-25px);
+
 }
 #home{
+    z-index: 10000;
     position: absolute;
     width: 250px;
     height: 150px;
@@ -113,7 +183,7 @@ body{
 
 #infonavbox{
     bottom: 0;
-    width: 125px;
+    width: fit-content;
     /* height: 75px; */
     position: relative;
     display: flex;
@@ -122,7 +192,7 @@ body{
 #infonav{
     padding: 5px;
     margin-top: 65px;
-    width: 200px;
+    width: fit-content;
     height: 85px;
     background-color: #343434;
     position: relative;
@@ -134,6 +204,7 @@ body{
     height: 37.5px;
     display: flex;
     flex-direction: row-reverse;
+    margin-right: 7px;
 }
 
 .icone{
@@ -174,6 +245,7 @@ body{
     margin-left: 8px;
     display: flex;
     flex-direction: row-reverse;
+    margin-right: 7px;
 }
 
 #deuxpoints{
@@ -187,52 +259,231 @@ body{
 }
 
 
-
-
-
-
-
-
-
-/* css mobile */
-#mobile{
+/*contact*/
+#contact{
+    width: 450px;height: 550px;
+    background-color: rgba(217, 217, 217, 0.5);
+    border-radius: 50px 50px 15px 50px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    position: absolute;
+    right: -450px;
+    bottom: 110px;
+    z-index: -1;
+    transition: transform 0.5s ease-out;
+}
+#contactConteneur{
+    width: 400px;height: 500px;
+    position: relative;
+    left: 25px; top: 25px;
+}
+.titre{
+    font-family: "Jura", sans-serif;
+    color: #343434;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.liContact{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px
+}
+.txtContact{
+    font-family: "Jura", sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    margin-bottom: 3px;
+}
+.inputContact{
+    padding: 10px;
+    font-family: "Jura", sans-serif;
+    background-color: rgba(52, 52, 52, 0.8);
+    border: none;
+    border-radius: 10px;
+    color:#d9d9d9;
+    font-size: 20px;
+    resize: none;
+}
+#msg{
+    height: 150px;
+    overflow-y: scroll;
+}
+.inputContact::placeholder{
+    color: rgba(217, 217, 217, 0.5);
+    font-size: 20px;
+}
+#zoneBoutonContact{
+    width: 100%; height: 50px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+#boutonContact{
+    height: 100%; width: 200px;
+    border: none;
+    border-radius: 15px;
+    background-color: #343434;
+    color: #d9d9d9;
+    font-size: 15px;
     font-family: "Jura", sans-serif;
     font-weight: 700;
 }
-#navmobile{
-    height: 250px;
-    width: 100%;
-    background-color: #3434347a;
-    position: fixed;
-    bottom: 0;
-    z-index: 1000;
-    border-radius: 30px 30px 0 0;
+#pres{
+    height: 100vh; width: 700px;
+    /* background-color: red; */
+    position: absolute;
+    bottom: -100vh ;
+    overflow-y: scroll;
+    left: 25px;
+    transition: transform 0.5s ease-out;
+    scrollbar-width: none;
 }
-#navmhaut{
-    height: 150px;
-    width: 100%;
-    position: fixed;
-    bottom: 90px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+@media screen and (max-width: 1280px){
+    #pres{
+        width: 535px;
+    }
 }
-#navmbas{
-    height: 90px;
-    width: 100%;
-    position: fixed;
-    bottom: 0;
-    background-image:url(logos/logobleu.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    z-index: 1001;
+#zonePres{
+    width:calc(100% - 50px);height: fit-content;
+    padding: 25px;
+    margin-top: calc(100vh - 300px);
+    padding-bottom: 400px;
+    background-color: rgba(217, 217, 217, 0.6);
+    border-radius: 50px 50px 0px 0px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
-.presmobile {
-    text-decoration: none;
-    color: #d9d9d9;
+.texte{
+    font-family: "Jura", sans-serif;
+    color: #343434;
+}
+.zoneSkills{
+    width: 100%;
+    height: fit-content;
+    display: grid;
+    /* flex-direction: row;
+    flex-wrap: wrap; */
+    justify-content: center;
+    justify-items: center;
+    grid-template-columns: repeat(4, 1fr);
+}
+.skillContour{
+    background-color: #343434;
+    height: fit-content;
+    width: 100px;
+    /* padding: 20px; */
+    border-radius: 20px;
+    margin: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: end;
+    align-items: center;
+    gap: 15px;
+}
+.skills{
+    color: #d9d9d9;
+    font-family: "Jura", sans-serif;
     text-align: center;
+    margin-bottom: 15px;
+    width: 90px;
+}
+.imgSkill{
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+}
+h4{
+    font-family: "Jura", sans-serif;
+    color: #343434;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+/* file explorer pc */
+.invis{
+    display: none;
+}
+#fondExplorer{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(217, 217, 217, 0.5);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+#centrageExplorer{
+    width: 90vw;
+    height: calc(90vh - 150px);
+    position: fixed;
+    left: 5vw;
+    top: 5vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.zoneFichiersExplorer{
+    width: calc(90vw - 600px);height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    overflow-y: auto;
+    /* background-color: red; */
+}
+.boutonMinia{
+    width: 100px;height: 100px;
+    border: #343434 solid 5px;
+    border-radius: 25px;
+    box-sizing: border-box;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+.miniaExplorer{
+    width: 100%;height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.zoneAffichageExplorer{
+    padding-left: 10px;
+    border-left: solid 1px #d9d9d9;
+    width: 600px;height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+#descExplorer{
+    width: calc(100% - 20px);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    /* background-color: purple; */
+    padding: 10px;
+}
+.nomImg{
+    font-family: "Jura", sans-serif;height: 50px;
+}
+.descImg{
+    font-family: "Jura", sans-serif;
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+}
+#imgApercu{
+    object-fit: contain;
+    width: auto;
+    min-height: auto;
+    max-height: 50vh;
+    /* filter: drop-shadow(0 0 1rem #d9d9d9); */
+    /* border-radius: 10px; */
+    /* background-color: blue; */
+    margin: 10px;
+    justify-content: center;
+}
+#imgExplorer{
 }
